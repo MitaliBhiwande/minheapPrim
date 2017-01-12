@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 
-public class MST_Mitalivijay_Bhiwande_50208163
+public class MST_Mitalivijay_Bhiwande
 {	
 	static int numberofVertices;
 	static int sum;
@@ -32,12 +32,12 @@ public class MST_Mitalivijay_Bhiwande_50208163
 		numberofVertices = scan.nextInt();
 		numberofEdges = scan.nextInt();
 		//System.out.println(Integer.parseInt(parts[1]));
-		MST_Mitalivijay_Bhiwande_50208163 prim=new MST_Mitalivijay_Bhiwande_50208163();
+		MST_Mitalivijay_Bhiwande prim=new MST_Mitalivijay_Bhiwande();
 		ArrayList<PrimsEdges> list = new ArrayList<>();
 		
 		for (int i = 0; i < numberofEdges; i++) 
 		{				
-			MST_Mitalivijay_Bhiwande_50208163.PrimsEdges p = prim.new PrimsEdges();
+			MST_Mitalivijay_Bhiwande.PrimsEdges p = prim.new PrimsEdges();
 			//line = scan.nextLine();
 			//String[] inputs = line.split(" ");
 			p.u = scan.nextInt();
@@ -46,8 +46,8 @@ public class MST_Mitalivijay_Bhiwande_50208163
 			list.add(p);
 			
 			}
-		prim = new MST_Mitalivijay_Bhiwande_50208163();
-		MST_Mitalivijay_Bhiwande_50208163.PrimsEdges result=prim.new PrimsEdges();
+		prim = new MST_Mitalivijay_Bhiwande();
+		MST_Mitalivijay_Bhiwande.PrimsEdges result=prim.new PrimsEdges();
 		List<PrimsEdges> listEdge = prim.SpanningTree(list);
 		
 		for (Object edge : listEdge) {
@@ -206,7 +206,7 @@ public class MST_Mitalivijay_Bhiwande_50208163
 		while (!heap.empty()) {
 			int current = heap.extractMinNode();
 			//System.out.println(current);
-			MST_Mitalivijay_Bhiwande_50208163 prim1;
+			MST_Mitalivijay_Bhiwande prim1;
 			if (current != 1) {
 				Object spanningTreeEdge = vertexToEdge.get(current);
 				if (spanningTreeEdge != null) {
@@ -214,8 +214,8 @@ public class MST_Mitalivijay_Bhiwande_50208163
 				}
 			}
 
-			for (MST_Mitalivijay_Bhiwande_50208163.PrimsEdges edge : list) {
-				prim1 = new MST_Mitalivijay_Bhiwande_50208163();
+			for (MST_Mitalivijay_Bhiwande.PrimsEdges edge : list) {
+				prim1 = new MST_Mitalivijay_Bhiwande();
 				PrimsEdges neighbour =prim1.new PrimsEdges();
 				neighbour = (PrimsEdges) edge;
 				//System.out.println(neighbour);
